@@ -22,7 +22,7 @@ jobs:
       - name: Run the tests
         run: |
           pipenv install django
-          import dj_database_url
-          import django_heroku
+          pipenv install dj-database-url
+          pipenv install django-heroku
           echo 'DJANGO_SECRET_KEY=TESTING' > .env
           pipenv run website/manage.py test hello
